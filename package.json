@@ -9,6 +9,10 @@
     "description": "My personal Eslint config",
     "author": "Michael Yakovlev",
     "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kvadrofilii/eslint-config.git"
+    },
     "keywords": [
         "eslint",
         "eslint config",
