@@ -1,0 +1,21 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+
+    "compilerOptions": {
+        "target": "es2022",
+        "lib": ["es2023"],
+
+        "moduleDetection": "force",
+        "module": "Preserve",
+        "moduleResolution": "Bundler",
+        "resolveJsonModule": true,
+        "allowJs": true,
+        "checkJs": true,
+        "strict": true,
+        "esModuleInterop": true,
+        "isolatedModules": true,
+        "verbatimModuleSyntax": true,
+        "skipLibCheck": true
+    },
+    "include": ["src"]
+}
