@@ -33,7 +33,9 @@
             "default": "./dist/index.cjs"
         }
     },
-    "main": "./dist/index.mjs",
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.cts",
     "engines": {
         "node": "^18.18.0 || ^20.9.0 || >= 21.1.0"
     },
