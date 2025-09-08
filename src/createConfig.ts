@@ -20,8 +20,12 @@ import {
 } from './configs'
 import { GLOB_EXCLUDE } from './globs'
 import type { ExtendableConfigName } from './types'
+import type { FlatConfig } from '@typescript-eslint/utils/ts-eslint'
 
-export function createConfig(options: ExtendableConfigName = {}) {
+export function createConfig(
+    options: ExtendableConfigName = {},
+    ...userConfigs: ConfigWithExtends[]
+): FlatConfig.ConfigArray {
     const {
         jsdoc: enableJsdoc = true,
         jsonc: enableJsonc = true,
@@ -90,6 +94,7 @@ export function createConfig(options: ExtendableConfigName = {}) {
         configs.push(unicorn)
     }
 
+    configs.push(...userConfigs)
     configs.push(prettier)
 
     return tseslint.config(configs)
