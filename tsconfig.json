@@ -1,21 +1,19 @@
 {
     "$schema": "https://json.schemastore.org/tsconfig",
-
     "compilerOptions": {
-        "target": "es2022",
-        "lib": ["es2023"],
-
+        "target": "ESNext",
+        "lib": ["ESNext"],
         "moduleDetection": "force",
-        "module": "Preserve",
-        "moduleResolution": "Bundler",
-        "resolveJsonModule": true,
-        "allowJs": true,
-        "checkJs": true,
+        "module": "ESNext",
         "strict": true,
         "esModuleInterop": true,
         "isolatedModules": true,
+        "moduleResolution": "node",
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "types": ["node"],
         "verbatimModuleSyntax": true,
         "skipLibCheck": true
     },
-    "include": ["src"]
+    "include": ["src/**/*", "eslint.config.ts"]
 }
