@@ -1,6 +1,6 @@
 {
     "name": "@michael-yakovlev/eslint-config",
-    "version": "0.0.15",
+    "version": "0.1.0",
     "description": "My personal ESLint config",
     "type": "module",
     "license": "MIT",
