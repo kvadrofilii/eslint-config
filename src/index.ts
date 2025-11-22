@@ -91,4 +91,4 @@ export const configs = {
     prettier: eslintConfigPrettier,
 }
 
-export * as globs from './globs'
+export * from './globs'
