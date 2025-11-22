@@ -88,4 +88,7 @@ export const configs = {
     tanstack,
     unicorn,
     vitest,
+    prettier: eslintConfigPrettier,
 }
+
+export * as globs from './globs'
