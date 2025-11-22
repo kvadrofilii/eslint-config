@@ -1,21 +1,22 @@
 export const CONFIG_NAMES = [
     'a11y',
-    'imports',
-    'javascript',
+    'fsd',
     'jsdoc',
     'jsonc',
-    'jsx',
-    'nextjs',
     'node',
+    'playwright',
     'prettier',
-    'query',
     'react',
     'regexp',
+    'sonarjs',
     'sort',
-    'test',
-    'typescript',
+    'tanstack',
     'unicorn',
+    'vitest',
 ] as const
 
 export type ConfigNames = (typeof CONFIG_NAMES)[number]
-export type ExtendableConfigName = Partial<Record<ConfigNames, boolean>>
+
+export type ExtendableConfigName = Partial<Record<ConfigNames, boolean>> & {
+    ignores?: Array<string>
+}

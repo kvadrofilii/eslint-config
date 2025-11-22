@@ -1,12 +1,13 @@
-import type { ConfigWithExtends } from 'typescript-eslint'
+import type { Linter } from 'eslint'
+import { PACKAGE_JSON, TS_CONFIG } from '../globs'
 
 /**
  * Sort package.json
  *
  * Requires `jsonc` config
  */
-export const sortPackageJson: ConfigWithExtends = {
-    files: ['**/package.json'],
+export const sortPackageJson = (): Linter.Config => ({
+    files: [PACKAGE_JSON],
     name: 'michael-yakovlev/sort/package-json',
     rules: {
         'jsonc/sort-array-values': [
@@ -98,7 +99,7 @@ export const sortPackageJson: ConfigWithExtends = {
             },
         ],
     },
-}
+})
 
 /**
  * Sort tsconfig.json
@@ -106,8 +107,8 @@ export const sortPackageJson: ConfigWithExtends = {
  * Requires `jsonc` config
  */
 
-export const sortTsconfig: ConfigWithExtends = {
-    files: ['**/[jt]sconfig.json', '**/[jt]sconfig.*.json'],
+export const sortTsconfig = (): Linter.Config => ({
+    files: TS_CONFIG,
     name: 'michael-yakovlev/sort/tsconfig-json',
     rules: {
         'jsonc/sort-keys': [
@@ -222,4 +223,4 @@ export const sortTsconfig: ConfigWithExtends = {
             },
         ],
     },
-}
+})

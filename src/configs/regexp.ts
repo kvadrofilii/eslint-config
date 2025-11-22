@@ -1,7 +1,6 @@
 import { configs } from 'eslint-plugin-regexp'
-import type { ConfigWithExtends } from 'typescript-eslint'
+import type { Linter } from 'eslint'
 
-export const regexp: ConfigWithExtends = {
-    ...configs['flat/recommended'],
-    name: 'michael-yakovlev/regexp/rules',
+export const regexp = (): Linter.Config => {
+    return configs['flat/recommended']
 }
